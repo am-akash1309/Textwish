@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>TextWish</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Kreon' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Saira Stencil One' rel='stylesheet'>
+        <link href="./pagecss.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="./angular.js"></script>
+    </head>
+    <body ng-app="appname" ng-controller="nameofcontroller">
+        <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+              <a class="center brand-logo black-text">TextWish</a>
+              <form class="searchform" style="display: inline-block !important;">
+                <div class="input-field">
+                  <input class="indigo lighten-5" id="search" type="search" placeholder="Search" required>
+                </div>
+              </form>
+              <ul class="right" style="display: inline-block !important;">
+                <li><a><i class="material-icons black-text" onclick="text('home')">home</i></a></li>
+                <li><a><i class="material-icons black-text" onclick="text('message')">message</i></a></li>
+                <li><a><i class="material-icons black-text modal-trigger" href="#newpost">add_box</i></a></li>
+                <li><a><i class="material-icons black-text" onclick="text('favorite')">favorite_border</i></a></li>
+                <li><a><i class="material-icons black-text" onclick="text('account')">account_circle</i></a></li>
+              </ul>
+            </div>
+        </nav>
+        </div>
+        <br>
+        <!-- <div class="row">
+            <div class="col s6 offset-s3 center">
+                <img id="inhome" width="400">
+            </div>
+        </div>
+        <div class="row imagename">
+            <div class="col s6 offset-s3 center">
+                <div>{{name}}</div>
+            </div>
+        </div>
+        <div class="row caption">
+            <div class="col s6 offset-s3 left">
+                <div>{{caption}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s3 left">
+                <a class="tags">{{tags}}</a>
+            </div>
+        </div> -->
+        <div class="row carddiv">
+            <div class="col s6 offset-s3 center">
+                <div class="card">
+                    <div class="card-content">
+                        <img id="inhome" width="400">
+                        <div class="caption">{{caption}}</div>
+                        <a>{{tags}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="newpost" class="modal model1">
+            <div class="modal-content">
+                <div class="center modalheading">
+                    Create new post
+                    <a class="btn modal-trigger right modal-close" href="#share">Next</a>
+                </div>
+                <br>
+                <hr>
+                <div class="center"><i class="material-icons addaphoto">add_a_photo</i></div>
+                <label for="files"><div class="center"><a class="btn uploadbtn">Select from the Device</a></div></label>
+                <input id="files" style="visibility:hidden;" onchange="loadFile(event)" type="file">
+            </div>
+        </div>
+        <a class="btn" ng-click="view()" >Clickme</a>
+
+        <div id="share" class="modal modal2">
+            <div class="modal-content">
+                <div class="center modalheading">
+                    Create new post
+                    <a class="btn right modal-close">Share</a>
+                </div>
+                <br>
+                <hr>
+                <div class="row">
+                    <div class="col s6">
+                        <img id="inshare" width="310" alt="Your image">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" placeholder="Image Name" ng-model="name">
+                        <textarea placeholder="Write a caption..." ng-model="caption"></textarea>
+                        <input type="text" placeholder="Add Tags" ng-model="tags">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./javascript.js"></script>
+    </body>
+</html>

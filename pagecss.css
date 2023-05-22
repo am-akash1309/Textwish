@@ -1,0 +1,64 @@
+.brand-logo{
+    font-family: Lucida Handwriting;
+    font-size: xx-large !important;
+    font-weight: bold;
+}
+.searchform{
+    width: 25%;
+}
+#search{
+    margin-top: 13px;
+    height: 60%;
+    border-radius: 20px;
+}
+.nav-wrapper{
+    background: white;
+}
+.material-icons.black-text{
+    font-size: xx-large !important;
+}
+.modalheading{
+    font-weight: 500;
+    font-size: larger;
+}
+.modal{
+    border-radius: 20px;
+}
+.modal.modal1{
+    width: 500px !important;
+}
+.modal.modal2{
+    width: 750px;
+}
+.btn{
+    background: blue;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.uploadbtn{
+    margin-bottom: 100px !important;
+}
+.addaphoto{
+    font-size: 100px;
+    padding-top: 50px;
+}
+textarea{
+    height: 200px;
+    width: 330px;
+    border-radius: 7px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+.imagename{
+    font-family: 'Saira Stencil One';
+    font-size: 22px;
+}
+.caption{
+    font-size: 23px;
+    font-family: 'Kreon';
+}
+.tags{
+    font-size: 19px;
+    font-family: 'Almendra';
+
+}
